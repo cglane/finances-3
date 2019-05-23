@@ -17,7 +17,6 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         HeaderComponent,
-        LandingComponent
       ],
     }).compileComponents();
   }));
