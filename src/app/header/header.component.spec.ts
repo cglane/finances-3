@@ -6,7 +6,7 @@ import { MatButtonModule, MatMenuModule, MatIconModule } from '@angular/material
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
   let fixture: ComponentFixture<HeaderComponent>;
-  let h1: HTMLElement;
+  let homeButton: HTMLElement;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -26,11 +26,11 @@ describe('HeaderComponent', () => {
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-    h1 = fixture.nativeElement.querySelector('button');
+    homeButton = fixture.nativeElement.querySelector('#menu-button');
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(h1)
+    expect(homeButton.textContent).toEqual('Menu')
   });
 });
