@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LandingComponent } from './landing.component';
+import { MatButtonModule, MatMenuModule, MatIconModule } from '@angular/material';
 
 describe('LandingComponent', () => {
   let component: LandingComponent;
@@ -8,7 +9,8 @@ describe('LandingComponent', () => {
   let rows: NodeList
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [LandingComponent]
+      imports: [MatIconModule],
+      declarations: [LandingComponent,]
     })
       .compileComponents();
   }));
@@ -22,6 +24,8 @@ describe('LandingComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
-    expect(rows.length).toBe(3);
   });
+  it('should only have four rows', () => {
+    expect(rows.length).toBe(4);
+  })
 });
