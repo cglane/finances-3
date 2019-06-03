@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatButtonModule, MatMenuModule, MatIconModule } from '@angular/material';
 
 @Component({
   selector: 'app-dashboard',

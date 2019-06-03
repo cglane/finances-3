@@ -9,11 +9,13 @@ $rgba-primary-2: #0C8B8B;
 $rgba-primary-3: #D9D28B;
 
 body{
-    background: $rgba-primary-0 !important;
+    background: $rgba-primary-2 !important;
 }
 header{
     position: relative;
 z-index: 10;
+    background: $rgba-primary-0 !important;
+
     box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12) !important;
 }
 .primary-zero {
@@ -26,10 +28,10 @@ z-index: 10;
     background: $rgba-primary-2
 }
 
-.primary-two{
+.primary-three{
     background: $rgba-primary-3
 }
-h1, h2, h3, h4, h5, h6, p, button{
+h1, h2, h3, h4, h5, h6, p, button, div{
     font-family: Georgia, serif,"Helvetica Neue";
 font-size: 24px;
 letter-spacing: 0.6px;

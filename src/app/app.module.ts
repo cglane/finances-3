@@ -5,15 +5,21 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatMenuModule, MatIconModule } from '@angular/material';
+import {
+  MatButtonModule,
+  MatMenuModule,
+  MatIconModule,
+  MatTabsModule,
+} from '@angular/material';
 import { LandingComponent } from './landing/landing.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     HeaderComponent,
-    LandingComponent
+    LandingComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,7 +27,9 @@ import { LandingComponent } from './landing/landing.component';
     NoopAnimationsModule,
     MatButtonModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatTabsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
