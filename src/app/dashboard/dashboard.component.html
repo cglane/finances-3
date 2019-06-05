@@ -1,12 +1,12 @@
 <mat-tab-group class="primary-two">
   <mat-tab label="Upload Your Transactions">
     <button id="menu-button" mat-button>Upload Transactions</button>
-    <ul class="heroes">
-      <li *ngFor="let hero of heroes">
-        <a routerLink="/detail/{{hero.id}}">
-          <span class="badge">{{hero.id}}</span> {{hero.name}}
+    <ul class="transactions">
+      <li *ngFor="let trans of transactions">
+        <a routerLink="/detail/{{trans.id}}">
+          <span class="badge">{{trans.id}}</span> {{trans.name}}
         </a>
-        <button class="delete" title="delete hero" (click)="delete(hero)">x</button>
+        <button class="delete" title="delete trans" (click)="delete(trans)">x</button>
       </li>
     </ul>
   </mat-tab>

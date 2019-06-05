@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatButtonModule, MatMenuModule, MatIconModule } from '@angular/material';
-import { HeroService } from '../hero.service';
-import { Hero } from '../hero';
+import { TransactionService } from '../transaction.service';
+import { Transaction } from '../transaction';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,16 +9,16 @@ import { Hero } from '../hero';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[];
+  transactions: Transaction[];
 
-  constructor(private heroService: HeroService) { }
+  constructor(private transactionService: TransactionService) { }
 
   ngOnInit() {
-    this.getHeroes();
+    this.getTransactions();
   }
 
-  getHeroes(): void {
-    this.heroService.getHeroes()
-      .subscribe(heroes => this.heroes = heroes);
+  getTransactions(): void {
+    this.transactionService.getTransactions()
+      .subscribe(transactions => this.transactions = transactions);
   }
 }
