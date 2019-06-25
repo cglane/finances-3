@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTabsModule } from '@angular/material';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
-import { MatSnackBarModule, MatTableModule } from '@angular/material';
+import { MatSnackBarModule, MatTableModule, MatIconModule } from '@angular/material';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -18,7 +18,9 @@ describe('DashboardComponent', () => {
         MatTabsModule,
         NoopAnimationsModule,
         HttpClientTestingModule,
-        MatSnackBarModule, MatTableModule
+        MatSnackBarModule,
+        MatTableModule,
+        MatIconModule
       ],
       declarations: [DashboardComponent]
     })
