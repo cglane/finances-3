@@ -8,17 +8,17 @@ import { Injectable } from '@angular/core';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const transactions = [
-      { id: 11, name: 'Dr Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      { id: 11, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+      { id: 12, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+      { id: 13, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+      { id: 14, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+      { id: 15, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+      { id: 16, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+      { id: 17, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+      { id: 18, amount: -10.0, date: new Date(), location: 'Plaza Park', categoryOne: 'Restaurant Meal', categoryTwo: 'Regular Budget', description: 'Went out to eat with tiffany' },
+
     ];
+
     return { transactions };
   }
 

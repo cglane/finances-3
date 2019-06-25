@@ -15,6 +15,7 @@ import { LandingComponent } from './landing/landing.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { MatSnackBarModule, MatTableModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,9 @@ import { InMemoryDataService } from './in-memory-data.service';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    MatSnackBarModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

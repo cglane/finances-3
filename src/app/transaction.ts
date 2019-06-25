@@ -1,4 +1,9 @@
 export class Transaction {
   id: number;
-  name: string;
+  amount: number;
+  date: Date;
+  location: string;
+  categoryOne: string;
+  categoryTwo: string;
+  description: string;
 }
