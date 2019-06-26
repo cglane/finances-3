@@ -35,7 +35,14 @@ export class TransactionService {
       return of(result as T);
     };
   }
+  deleteTransaction(transaction: Transaction | number): Observable<Transaction> {
+    const id = typeof transaction === 'number' ? transaction : transaction.id;
+    const url = `${this.transactionsUrl}/${id}`;
 
+    return this.http.delete<Transaction>(url, httpOptions).pipe(
+      catchError(this.handleError<Transaction>('deleteTransaction'))
+    );
+  }
   /** GET transactions from the server */
   getTransactions(): Observable<Transaction[]> {
     return this.http.get<Transaction[]>(this.transactionsUrl)

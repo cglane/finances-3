@@ -28,14 +28,19 @@ export class DashboardComponent implements OnInit {
   }
   editField: string;
 
-  updateList(id: number, property: string, event: any) {
-    const editField = event.target.textContent;
-    this.transactions[id][property] = editField;
-    console.log(this.transactions, 'transactions')
+  updateList(index: number, property: string, event: any) {
+    let transaction = this.transactions[index]
+    if (transaction) {
+      const editField = event.target.textContent;
+      transaction[property] = editField
+      this.transactionService.updateTransaction(transaction).subscribe()
+    }
   }
 
-  remove(id: any) {
-    this.transactions.splice(id, 1);
+  remove(index: any) {
+    let transaction = this.transactions[index]
+    this.transactionService.deleteTransaction(transaction).subscribe();
+    this.transactions.splice(index, 1);
   }
 
   add() {
