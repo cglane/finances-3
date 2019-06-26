@@ -39,10 +39,11 @@ export class DashboardComponent implements OnInit {
   }
 
   add() {
-    if (this.transactions.length > 0) {
-      const transaction = new Transaction()
-      this.transactions.push(transaction);
-    }
+    this.transactionService.addTransaction(new Transaction)
+      .subscribe(transaction => {
+        this.transactions.push(transaction);
+        console.log(this.transactions, 'trans')
+      });
   }
 
   changeValue(id: number, property: string, event: any) {

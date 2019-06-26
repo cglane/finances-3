@@ -56,4 +56,9 @@ export class TransactionService {
       catchError(this.handleError<any>('updateTransaction'))
     );
   }
+  addTransaction(transaction: Transaction): Observable<Transaction> {
+    return this.http.post<Transaction>(this.transactionsUrl, transaction, httpOptions).pipe(
+      catchError(this.handleError<Transaction>('addTransaction'))
+    );
+  }
 }
